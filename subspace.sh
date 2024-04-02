@@ -36,11 +36,11 @@ nohup ./subspace/target/production/subspace-farmer \
 	 --node-rpc-url ws://111.46.8.20:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
 	 --metrics-endpoints 127.0.0.1:9081 \
-	 path=/nvme0n1/subspace,size=3900G \
-	 path=/nvme1n1/subspace,size=3900G \
-	 path=/nvme2n1/subspace,size=3900G \
-	 path=/nvme3n1/subspace,size=3900G \
-	 path=/nvme4n1/subspace,size=3900G \
+	 path=/nvme0n1/subspace,size=3990G \
+	 path=/nvme1n1/subspace,size=3990G \
+	 path=/nvme2n1/subspace,size=3990G \
+	 path=/nvme3n1/subspace,size=3990G \
+	 path=/nvme4n1/subspace,size=3990G \
 	 >>./subspace-farmer-`date +%Y-%m-%d`.log  2>&1 &
 
 echo "[`date '+%Y-%m-%d %H:%M:%s'`] subspace farmer started"
