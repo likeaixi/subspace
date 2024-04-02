@@ -9,8 +9,7 @@ fi
 
 RUSTC_VERSION=nightly-2024-02-29
 
-apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         ca-certificates \
         protobuf-compiler \
         curl \
