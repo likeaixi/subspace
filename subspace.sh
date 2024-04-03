@@ -32,7 +32,7 @@ cargo build \
     --bin subspace-node \
     --bin subspace-farmer
 
-nohup ./subspace/target/production/subspace-farmer \
+nohup ./target/production/subspace-farmer \
 	 farm \
 	 --node-rpc-url ws://111.46.8.20:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
