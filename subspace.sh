@@ -9,7 +9,7 @@ fi
 
 nohup ./subspace-farmer \
 	 farm \
-	 --node-rpc-url ws://111.46.8.20:9944 \
+	 --node-rpc-url ws://111.46.8.21:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
 	 --metrics-endpoints 127.0.0.1:9081 \
 	 path=/nvme0n1/subspace,size=3600G \
