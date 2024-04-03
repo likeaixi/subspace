@@ -7,32 +7,7 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-RUSTC_VERSION=nightly-2024-02-29
-
-apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        ca-certificates \
-        protobuf-compiler \
-        curl \
-        git \
-        llvm \
-        clang \
-        automake \
-        libtool \
-        pkg-config \
-        make && \
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain ${RUSTC_VERSION}
-
-source $HOME/.cargo/env
-
-git clone https://github.com/subspace/subspace.git && cd subspace && TAG=$(git describe --tags $(git rev-list --tags --max-count=1)) && git checkout $TAG
-
-cargo build \
-    --profile production \
-    --bin subspace-node \
-    --bin subspace-farmer
-
-nohup ./target/production/subspace-farmer \
+nohup ./subspace-farmer \
 	 farm \
 	 --node-rpc-url ws://111.46.8.20:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
