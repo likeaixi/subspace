@@ -25,7 +25,7 @@ apt-get update && \
 
 source $HOME/.cargo/env
 
-git clone https://github.com/subspace/subspace.git && cd subspace && TAG=$(git describe --tags $(git rev-list --tags --max-count=1)) && git switch $TAG
+git clone https://github.com/subspace/subspace.git && cd subspace && TAG=$(git describe --tags $(git rev-list --tags --max-count=1)) && git checkout $TAG
 
 cargo build \
     --profile production \
