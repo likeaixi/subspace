@@ -9,7 +9,7 @@ fi
 
 nohup ./subspace-farmer \
 	 farm \
-	 --node-rpc-url ws://192.168.111.53:9944 \
+	 --node-rpc-url ws://192.168.111.89:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
 	 path=/data/subspace,size=3500G \
 	 >>./subspace-farmer-`date +%Y-%m-%d`.log  2>&1 &
