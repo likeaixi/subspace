@@ -7,11 +7,11 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-nohup ./subspace-farmer \
+nohup /root/subspace-farmer \
 	 farm \
 	 --node-rpc-url ws://192.168.111.55:9944 \
 	 --reward-address stC1RQiySPW7GYu6xAn1x7unx86NuthF9shzQnjEGPbF5ps3P \
 	 path=/data/subspace,size=3500G \
-	 >>./subspace-farmer-`date +%Y-%m-%d`.log  2>&1 &
+	 >>/root/subspace-farmer-`date +%Y-%m-%d`.log  2>&1 &
 
 echo "[`date '+%Y-%m-%d %H:%M:%s'`] subspace farmer started"
