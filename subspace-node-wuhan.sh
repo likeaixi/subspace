@@ -2,7 +2,7 @@
 
 nohup /root/subspace/subspace-node \
     run \
-    --chain gemini-3h \
+    --chain mainnet \
     --base-path /root/subspace \
     --farmer \
     --rpc-cors  all \
